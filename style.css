@@ -21,12 +21,12 @@
         justify-content: space-between;
         align-items: center;
         padding: 15px 30px;
-        background-color: rgba(0, 0, 0, 0.5); 
+        background-color: rgba(95, 93, 93, 0.5); 
         backdrop-filter: blur(8px); 
         position: sticky; /* Sticks the nav to the top */
         top: 0;
         z-index: 1000;
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        /* box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); */
     }
     
     /* Logo/Name Styling */
@@ -72,9 +72,9 @@
         border-bottom: 2px solid #007BFF; 
     }
 
- 
+
+
 .section-home {
-  
     height: 100vh; 
     width: 100%; 
     padding: 6rem 0;
@@ -89,7 +89,7 @@
  /* Home icons */
 .social-icons {
     display: flex;
-    justify-content: center;
+    gap: 0.5rem;
     margin-top: 40px;
 }
 
@@ -101,6 +101,15 @@
     color: #fff; 
     transition: box-shadow 0.3s ease, transform 0.3s ease;
 }
+
+.left-aligned{
+    justify-content: flex-start;
+}
+.right-aligned{
+    justify-content: flex-end;
+}
+
+
 
 /* Glowing Effect */
 .social-icons a:hover {
@@ -116,7 +125,7 @@
     display: flex; 
     justify-content: space-between; 
     max-width: 800px;
-    margin: 0 auto; 
+    margin: 1rem auto; 
     gap: 0.5rem; 
 }
 
@@ -150,7 +159,7 @@
     margin-top: 50px;
 }
 .button {
-    padding: 10px 20px;
+    padding: 10px 60px;
     font-size: 18px;
     color: white;
     border: none;
@@ -194,6 +203,8 @@
                 0 0 50px rgba(0, 123, 255, 0.8),
                 0 0 75px rgba(0, 123, 255, 0.6);
 }
+
+
 
 /* Animation for glowing effect */
 @keyframes glowing {
@@ -262,7 +273,7 @@
     max-width: 800px;
     margin: 0 auto;
 }
-.project-content h2{
+.project-content h1{
     font-family: "Poppins", sans-serif;
     font-weight: 300;
     font-style: normal;
@@ -357,6 +368,7 @@
 }
 
 .about-me-container {
+    height: 100vh;
     display: flex;
     max-width: 800px;
     margin: 0 auto; 
@@ -387,6 +399,9 @@
     text-align: justify;
 }
 
+.christian-section{
+    flex-direction: row-reverse;
+}
 .tech-icons {
     padding: 1.5rem;
     display: flex;
@@ -425,6 +440,29 @@ footer {
     padding: 50px;
     border-radius: 10px;
     flex-wrap: wrap; /* Allow content to wrap on smaller screens */
+}
+
+.option-container {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin: 20px;
+}
+
+label {
+    font-size: 1rem;
+    margin-right: 10px;
+    font-weight: bold;
+}
+
+select {
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    cursor: pointer;
+    outline: none;
+    transition: all 0.3s ease;
 }
 
 .contact-form {

@@ -14,7 +14,6 @@ navLinks.forEach(link => {
     link.addEventListener('click', function () {
 
         navLinks.forEach(nav => nav.classList.remove('active'));
-
      
         this.classList.add('active');
     });
@@ -22,8 +21,12 @@ navLinks.forEach(link => {
 
 
 //button aboutme
-document.querySelector('.button-container .button').addEventListener('click', () => {
-    document.querySelector('.aboutme-header').scrollIntoView({ behavior: 'smooth' });
+document.querySelector('.hector-button').addEventListener('click', () => {
+    document.querySelector('.hector-section').scrollIntoView({ behavior: 'smooth' });
+});
+
+document.querySelector('.christian-button').addEventListener('click', () => {
+    document.querySelector('.christian-section').scrollIntoView({ behavior: 'smooth' });
 });
 
 
