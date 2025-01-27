@@ -20,6 +20,22 @@ navLinks.forEach(link => {
 });
 
 
+// JavaScript for Boxicons hamburger menu functionality
+const hamburger = document.querySelector('.hamburger');
+const navItems = document.querySelector('.nav-items');
+
+hamburger.addEventListener('click', () => {
+  navItems.classList.toggle('active');
+  const icon = hamburger.querySelector('i');
+
+  // Toggle between menu and close icons
+  if (icon.classList.contains('bx-menu')) {
+    icon.classList.replace('bx-menu', 'bx-x');
+  } else {
+    icon.classList.replace('bx-x', 'bx-menu');
+  }
+});
+
 //button aboutme
 document.querySelector('.hector-button').addEventListener('click', () => {
     document.querySelector('.hector-section').scrollIntoView({ behavior: 'smooth' });

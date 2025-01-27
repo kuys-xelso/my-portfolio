@@ -5,77 +5,119 @@
     padding: 0;
     }
 
-    .name{
-        color: #000;
-        font-size: 2rem;
-        font-weight: 500;
-        padding: 0 2rem;
-    }
 
-    .name span {
-        color: #2a62e6;
-    }
+.name{
 
-    nav {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding: 15px 30px;
-        background-color: rgba(95, 93, 93, 0.5); 
-        backdrop-filter: blur(8px); 
-        position: sticky; /* Sticks the nav to the top */
-        top: 0;
-        z-index: 1000;
-        /* box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); */
-    }
+    color: #000;
+    font-size: 2rem;
+    font-weight: 500;
+    padding: 0 2rem;
+
+}
+
+ .name span {
+    color: #2a62e6;
+ }
+
+nav {
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    background-color: rgba(95, 93, 93, 0.5); 
+    backdrop-filter: blur(8px); 
+    position: sticky; /* Sticks the nav to the top */
+    top: 0;
+    z-index: 1000;
+    display: flex;
+    
+}
     
     /* Logo/Name Styling */
-    nav .name {
-        font-size: 2rem;
-        color: #fff;
-        font-weight: bold;
-    }
+ nav .name {
+    font-size: 2rem;
+    color: #fff;
+    font-weight: bold;
+}
     
-    nav .name span {
-        color: #007bff; /* Highlight part of the name */
-    }
+nav .name span {
+    color: #007bff; /* Highlight part of the name */
+}
     
     /* Navigation Items */
-    .nav-items {
-        display: flex;
-        gap: 80px;
-    }
+.nav-items {
+    display: flex;
+    gap: 80px;
+}
     
-    .nav-items a {
-        color: #fff;
-        text-decoration: none;
-        font-size: 1rem;
-        position: relative;
-        transition: color 0.3s ease; /* Smooth color transition */
-    }
+.nav-items a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1rem;
+    position: relative;
+    transition: color 0.3s ease; /* Smooth color transition */
+}
     
     /* Hover Effect: Text Color Change */
-    .nav-items a:hover {
+.nav-items a:hover {
         color: #007bff;
-    }
+}
     
-    .nav-link {
-        text-decoration: none;
-        color: #333;
-        padding: 10px 15px;
-        transition: color 0.3s ease;
-    }
+.nav-link {
+    text-decoration: none;
+    color: #333;
+    padding: 10px 15px;
+    transition: color 0.3s ease;
+}
     
-    .nav-link.active {
-        color: #007BFF; 
-        font-weight: bold;
-        border-bottom: 2px solid #007BFF; 
-    }
+.nav-link.active {
+    color: #007BFF; 
+    font-weight: bold;
+    border-bottom: 2px solid #007BFF; 
+}
 
+.hamburger {
+    display: none;
+    cursor: pointer;
+    font-size: 2rem;
+    color: #fff;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .hamburger {
+      display: block;
+    }
+  
+    .nav-items {
+      display: none;
+      flex-direction: column;
+      background-color: rgba(95, 93, 93, 0.9);
+      position: absolute;
+      top: 60px;
+      right: 0;
+      width: 100%;
+      padding: 20px 0;
+      z-index: 999;
+    }
+  
+    .nav-items.active {
+      display: flex;
+    }
+  
+    .nav-items a {
+      margin: 10px 0;
+      text-align: center;
+    }
+  }
+  
+  /* Boxicons Icon Animation */
+  .hamburger i {
+    transition: all 0.3s ease;
+  }
 
 
 .section-home {
-    height: 100vh; 
+    height: auto; 
     width: 100%; 
     padding: 6rem 0;
     background-color: #00246B; 
@@ -108,7 +150,6 @@
 .right-aligned{
     justify-content: flex-end;
 }
-
 
 
 /* Glowing Effect */
@@ -368,7 +409,7 @@
 }
 
 .about-me-container {
-    height: 100vh;
+    height: auto;
     display: flex;
     max-width: 800px;
     margin: 0 auto; 
